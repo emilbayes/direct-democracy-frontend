@@ -1,0 +1,8 @@
+Install
+
+	npm install
+
+
+For SASS/Compass dev, and pushing to the server:
+
+	grunt sass-push

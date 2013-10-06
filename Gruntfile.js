@@ -200,10 +200,20 @@ module.exports = function(grunt) {
         'uglify', 
         'clean:templates'
     ]);
+
+    grunt.registerTask('sass-push', [
+        'clean:development',
+        'watch:index',
+        'watch:img',
+        'watch:compass',
+        'watch:rsync'
+    ]);
+
     grunt.registerTask('development', [
         'clean:development',
         'watch'
     ]);
+
     grunt.registerTask('push', ['build', 'exec'])
 
     grunt.registerTask('debug', function(){
