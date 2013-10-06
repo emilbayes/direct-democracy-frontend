@@ -1,6 +1,7 @@
 body {
 	background: #F7F7F7;
   font-family: "Helvetica Neue",Arial,sans-serif;
+  margin-top: 30px;
 
   .issue{
     margin: auto;
@@ -9,7 +10,7 @@ body {
     .issue-content{
       border-radius: 8px;
       background-color: #fff;
-      box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.75);
+      box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.35);
       width: 620px;
       float: left;
       margin-right: 30px;
@@ -39,7 +40,7 @@ body {
 
         .positive-votes, .negative-votes{
           background-color: #fff;
-          box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.75);
+          box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.35);
           border-radius: 40px;
           width: 70px;
           position: absolute;
@@ -76,6 +77,8 @@ body {
         padding-bottom: 10px;
         font-size: 1.8em;
         color: #fff;
+        margin-bottom: 20px;
+        cursor: pointer;
 
       }
       button.positive{
@@ -93,8 +96,14 @@ body {
     }
 
     .issue-progress, .issue-details{
-      width: 300px;
+      width: 260px;
       float: right;
+      border-radius: 8px;
+      background-color: #fff;
+      box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.35);
+      margin-bottom: 30px;
+      text-align: center;
+      padding: 20px;
     }
   }
 }
