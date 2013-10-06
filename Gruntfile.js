@@ -86,6 +86,20 @@ module.exports = function(grunt) {
             rsync: {
                 files: ['dist/**/*'],
                 tasks: ['exec']
+            },
+
+            'sass-push': {
+                files: [
+                    '<%= dirs.src.sass + files.sass %>',
+                    '<%= dirs.src.img + files.img %>',
+                    '<%= copy.index.src %>'
+                ],
+                tasks: [
+                    'copy:index',
+                    'copy:img',
+                    'compass',
+                    'exec'
+                ]
             }
             /*
             templates: {
@@ -203,10 +217,7 @@ module.exports = function(grunt) {
 
     grunt.registerTask('sass-push', [
         'clean:development',
-        'watch:index',
-        'watch:img',
-        'watch:compass',
-        'watch:rsync'
+        'watch:sass-push'
     ]);
 
     grunt.registerTask('development', [
