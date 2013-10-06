@@ -184,10 +184,10 @@ module.exports = function(grunt) {
 
         exec: {
             rsync: {
-                command: 'rsync --exclude=*.css -vr dist/client/ emil@212.71.237.149:/srv/directdemocracy/directdemocracy/static_dev/'
+                command: 'rsync -vr dist/client/js/ emil@212.71.237.149:/srv/directdemocracy/directdemocracy/static_dev/js/'
             },
             'rsync-sass': {
-                command: 'rsync -vr dist/client/css/ emil@212.71.237.149:/srv/directdemocracy/directdemocracy/static_dev/css/'
+                command: 'rsync --exclude=dist/client/js/ -vr dist/client/ emil@212.71.237.149:/srv/directdemocracy/directdemocracy/static_dev/'
             }
         }
     });
