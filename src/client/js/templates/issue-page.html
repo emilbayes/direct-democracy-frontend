@@ -1,0 +1,41 @@
+{{#name}}
+<section class="issue">
+	<article class="issue-content">
+		<header>
+			<h1>{{name}}</h1>
+			<div class="positive-votes">{{positivePercentage}} %</div>
+			<div class="negative-votes">{{negativePercentage}} %</div>
+		</header>
+		{{text}}
+		<button class="large positive">God idé!</button>
+		<button class="large negative">Dårlig idé!</button>
+		<h2 class="text-center divider">Artikler og kilde om emnet</h2>
+		{{#links}}
+			{{> link-partial }}
+		{{/links}}
+		{{^links}}
+			Loading
+		{{/links}}
+	</article>
+	<section class="issue-progress">
+		<h1>{{ progressPercentage }} %</h1>
+		<h2>
+			{{ votes }} har stemt <br>
+			{{ votesGoal }} er m&aring;let
+		</h2>
+	</section>
+	<aside class="issue-details">
+		<img src="{{author.avatar}}" alt="{{author.name}}" />
+		<h1>{{author.name}}</h1>
+		<p>{{author.bio}}</p>
+	</aside>
+	<section class="comments">
+		{{#comments}}
+			{{> comment-partial }}
+		{{/comments}}
+	</section>
+</section>
+{{/name}}
+{{^name}}
+Loading
+{{/name}}
