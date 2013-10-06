@@ -85,7 +85,7 @@ module.exports = function(grunt) {
             },
             rsync: {
                 files: ['dist/**/*'],
-                tasks: ['exec']
+                tasks: ['exec:rsync']
             },
 
             'sass-push': {
@@ -98,7 +98,7 @@ module.exports = function(grunt) {
                     'copy:index',
                     'copy:img',
                     'compass',
-                    'exec'
+                    'exec:rsync-sass'
                 ]
             }
             /*
@@ -184,7 +184,10 @@ module.exports = function(grunt) {
 
         exec: {
             rsync: {
-                command: 'rsync -vr dist/client/ emil@212.71.237.149:/srv/directdemocracy/directdemocracy/static_dev/'
+                command: 'rsync --exclude=*.css -vr dist/client/ emil@212.71.237.149:/srv/directdemocracy/directdemocracy/static_dev/'
+            },
+            'rsync-sass': {
+                command: 'rsync -vr dist/client/css/ emil@212.71.237.149:/srv/directdemocracy/directdemocracy/static_dev/css/'
             }
         }
     });
