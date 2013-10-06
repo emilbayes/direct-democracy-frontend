@@ -1,12 +1,100 @@
 body {
 	background: #F7F7F7;
+  font-family: "Helvetica Neue",Arial,sans-serif;
 
   .issue{
     margin: auto;
     width: 950px;
 
     .issue-content{
-      
+      border-radius: 8px;
+      background-color: #fff;
+      box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.75);
+      width: 620px;
+      float: left;
+      margin-right: 30px;
+
+      h2{
+        font-size: 1.3em;
+      }
+
+      p{
+        margin-top: 60px;
+        margin-right: 20px;
+        margin-left: 20px;
+        white-space: pre-wrap;
+      }
+
+      header{
+        background-color: #E7E7E7;
+        position:relative;
+
+        h1{
+          text-align: center;
+          margin: 0;
+          font-size: 2em;
+          padding-top: 20px;
+          padding-bottom: 30px;
+        }
+
+        .positive-votes, .negative-votes{
+          background-color: #fff;
+          box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.75);
+          border-radius: 40px;
+          width: 70px;
+          position: absolute;
+          top: 70px;
+          padding: 10px;
+          font-size: 1.7em;
+          font-weight: bold;
+          background-repeat: no-repeat;
+          background-position: 20px 5px;
+          padding-left: 70px;
+
+        }
+
+        .negative-votes{
+          left: 350px;
+          color: #FF003C;
+          background-image: image-url("design/neg.png");
+        }
+
+        .positive-votes{
+          left: 150px;
+          color: #00C176;
+          background-image: image-url("design/pos.png");
+        }
+
+      }
+
+      button.positive, button.negative{
+        border: 0;
+        border-radius: 6px;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        font-size: 1.8em;
+        color: #fff;
+
+      }
+      button.positive{
+        background-color: #00C176;
+        margin-left: 150px;
+      }
+
+      button.negative{
+        background-color: #FF003C;
+      }
+
+      .text-center{
+        text-align: center;
+      }
+    }
+
+    .issue-progress, .issue-details{
+      width: 300px;
+      float: right;
     }
   }
 }
